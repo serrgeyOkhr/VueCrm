@@ -8,7 +8,6 @@
     &_wrap
         display: flex
         align-items: center
-        min-height: 80px
         justify-content: space-between
     
     &_mobile, &_landline 
@@ -35,7 +34,7 @@
     background-color: $button-0-color
     color: #fff
     transition: 0.3s
-    transform: translateY(-100%)
+    transform: translateY(-200%)
     &__active
         //transform: translateY(0)
     &_nav
@@ -48,10 +47,9 @@
         align-items: center
         justify-content: center
         background-color: transparent
+        border: none
         border-right: 1px solid #ede6f8
         border-left: 1px solid #ede6f8
-        border-top: none
-        border-bottom: none
         height: 80px
         width: 70px
         &_line
@@ -80,4 +78,22 @@
         font-size: 14px
         color: $text-color-light
         display: block
+
+@media (max-width: 991px)
+    .navbar
+        &_mobile, &_landline 
+            display: none
+@media (max-width: 576px)
+    .logo
+         display: none
+    .menu
+        top: 60px
+        
+        z-index: 2
+        &_nav
+            flex-direction: column
+        &_link
+            margin-bottom: 20px
+        &-button
+            height: 60px
 

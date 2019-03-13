@@ -2,17 +2,22 @@ body
     +light
     color: $text-color
 
+.button-o
+    border: 2px solid $button-0-color
+    background: transparent
+    color: $button-0-color
+    padding: 18px 22px 16px 22px
+    font-size: 12px
+    +bold
+    text-transform: uppercase
+.button
+    border: none
+    background: $button-0-color
+    color: #ffffff
+    text-transform: uppercase
+    padding: 25px 45px
+    +bold
+
+@media (max-width: 576px)
     .button-o
-        border: 2px solid $button-0-color
-        background: transparent
-        color: $button-0-color
-        padding: 18px 22px 16px 22px
-        +bold
-        text-transform: uppercase
-    .button
-        border: none
-        background: $button-0-color
-        color: #ffffff
-        text-transform: uppercase
-        padding: 25px 45px
-        +bold
+        font-size: 10px
