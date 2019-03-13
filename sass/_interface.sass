@@ -17,7 +17,29 @@ body
     text-transform: uppercase
     padding: 25px 45px
     +bold
-
+.input
+    height: 80px
+    padding: 35px 31px
+    border: 1px solid #dddddd
+input[type="checkbox"]
+    display: none
+    &:checked + label:before
+        background-color: $button-0-color
+.checkbox
+    
+    &-lable
+        display: flex
+        align-items: center
+        margin-right: 40px
+        cursor: pointer
+        &:before
+            content: ''
+            width: 30px
+            height: 30px
+            border: 1px solid #dddddd
+            margin-right: 20px
+.bg-secondary
+    background: $bg-secondary
 @media (max-width: 576px)
     .button-o
         font-size: 10px
