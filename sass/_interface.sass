@@ -1,14 +1,18 @@
 body
     +light
     color: $text-color
+img
+    max-width: 100%
+    max-height: 100%
 .section
-    padding: 100px 0
+    padding-top: 100px
     &_title
         font-size: 30px
         +bold
         text-transform: uppercase
         text-align: center
         margin-bottom: 100px
+        margin-top: 0
 .button-o
     border: 2px solid $button-0-color
     background: transparent
@@ -17,6 +21,7 @@ body
     font-size: 12px
     +bold
     text-transform: uppercase
+    text-decoration: none
 .button
     border: none
     background: $button-0-color
@@ -24,6 +29,7 @@ body
     text-transform: uppercase
     padding: 25px 45px
     +bold
+    text-decoration: none
 .input
     height: 80px
     padding: 35px 31px
@@ -49,7 +55,7 @@ input[type="checkbox"]
     background: $bg-secondary
 @media (max-width: 991px)
     .section
-        padding: 80px 0
+        padding-top: 80px 
         &_title
             font-size: 28px
             margin-bottom: 80px
@@ -57,7 +63,7 @@ input[type="checkbox"]
     .button-o
         font-size: 10px
     .section
-        padding: 60px 0
+        padding-top: 60px 
         &_title
             font-size: 24px
             margin-bottom: 70px
