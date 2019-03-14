@@ -956,4 +956,128 @@ input[type="checkbox"]:checked + label:before {
         flex-basis: 80%;
   }
 }
+
+.rewiews {
+  padding-bottom: 300px;
+  background-color: #f1f1f1;
+}
+
+.rewiews_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rewiews_slider_item {
+  text-align: center;
+}
+
+.rewiews_slider_text {
+  font-size: 15px;
+  position: relative;
+  font-style: italic;
+  background-color: #fff;
+  max-width: 370px;
+  height: 135px;
+  line-height: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.rewiews_slider_text:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 5px solid #ffffff;
+  bottom: -15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.rewiews_slider_img {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #6a99e9;
+  border-radius: 50%;
+  margin: 30px auto;
+}
+
+.offer-better {
+  padding: 129px 0;
+}
+
+.offer-better_block {
+  background: #fff url("../img/offer-better/offer-better_bg.png") no-repeat center right;
+  background-size: contain;
+  padding: 80px;
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  margin-top: -350px;
+}
+
+.offer-better_subtitle {
+  display: block;
+  font-size: 21px;
+  margin-bottom: 48px;
+  max-width: 830px;
+}
+
+.form_text {
+  margin-left: 45px;
+}
+
+@media (max-width: 1199px) {
+  .offer-better_block {
+    background-position: center right -120px;
+    margin-top: -300px;
+  }
+  .offer-better_subtitle {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer-better_block {
+    background: none;
+    background-color: #fff;
+    padding: 40px;
+    margin-top: -300px;
+  }
+  .form_text {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .offer_title {
+    font-size: 20px;
+  }
+  .offer_subtitle {
+    font-size: 18px;
+  }
+  .form {
+    text-align: center;
+  }
+  .form_text {
+    margin-left: 0;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .form {
+    text-align: center;
+  }
+  .form_text {
+    margin-left: 0;
+    font-size: 10px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
