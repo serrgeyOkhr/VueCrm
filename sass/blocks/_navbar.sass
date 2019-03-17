@@ -37,8 +37,8 @@
     opacity: 0
     transform: translateY(-200%)
     &__active
-        //transform: translateY(0)
-        //opacity: 1
+        transform: translateY(0)
+        opacity: 1
     &_nav
         display: flex
         align-items: center
@@ -54,6 +54,10 @@
         border-left: 1px solid #ede6f8
         height: 80px
         width: 70px
+        &:focus
+            outline: none
+        &:hover
+            cursor: pointer
         &_line
             display: block
             width: 20px

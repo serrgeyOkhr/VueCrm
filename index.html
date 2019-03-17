@@ -6,20 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Скинали</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
+    <!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
+    <!-- <link rel="stylesheet" href="css/slick.css"> -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="menu menu__active">
+        <div class="menu">
             <div class="container">
                 <nav class="menu_nav">
                     <a href="#" class="menu_link">главная</a>
                     <a href="#" class="menu_link">продукция</a>
-                    <a href="#" class="menu_link">каталог</a>
+                    <a href="#catalog" class="menu_link">каталог</a>
                     <a href="#" class="menu_link">примеры работ</a>
-                    <a href="#" class="menu_link">примерка изображений</a>
+                    <a href="#before" class="menu_link">примерка изображений</a>
                     <a href="#" class="menu_link">стоимость дилерам</a>
                     <a href="#" class="menu_link">о скинали</a>
                 </nav>
@@ -50,7 +53,7 @@
                         <a class="navbar_phone" href="tel:+74991234567">+7 499 123-45-67</a>
                         <a class="navbar_email navbar_small-text" href="mailto:info@mail.cu">info@mail.cu</a>
                     </div>
-                    <button class="button-o navbar_button">Получить консультацию</button>
+                    <a href="#offer" class="button-o navbar_button">Получить консультацию</a >
                 </div>
                 <!-- /.navbar_wrap -->
             </div>
@@ -63,7 +66,7 @@
                     Гарантия <br> минимальной цены <br> на скинали
                 </h1>
                 <span class="hero_subtitle">от 3 000 р/м<sup>2</sup></span>
-                <button class="button hero_button">Заказать скинали</button>
+                <a href="#offer" class="button hero_button">Заказать скинали</a >
             </div>
         </div>
         <!-- /.hero -->
@@ -71,7 +74,7 @@
     <!-- /.header -->
 
     <main>
-        <section class="offer bg-secondary">
+        <section class="offer bg-secondary" id="offer">
             <div class="container">
                 <div class="offer_block offer-block">
                     <h2 class="offer_title">Оставьте заявку на расчет</h2>
@@ -80,15 +83,22 @@
                         <div class="form_row">
                             <div class="form_group">
                                 <label class="form_lable">Вид стекла</label>
-                                <input type="text" class="input form_input">
+                                <input type="hidden" name="type" id="select-type" value="С печатью">
+                                <div class="select form_select">
+                                    <div class="select_checked">С печатью</div>
+                                    <ul class="select_dropdown">
+                                        <li class="select_option" data-value="С печатью">С печатью</li>
+                                        <li class="select_option" data-value="Без печати">Без печати</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form_group">
                                 <label class="form_lable">Ширина, см</label>
-                                <input type="text" class="input form_input">
+                                <input type="number" class="input form_input">
                             </div>
                             <div class="form_group">
                                 <label class="form_lable">Высота, см</label>
-                                <input type="text" class="input form_input">
+                                <input type="number" class="input form_input">
                             </div>
                         </div>
                         <div class="form_row form_row-checkbox">
@@ -117,7 +127,7 @@
             <!-- /.container -->
         </section>
         <!-- /.offer -->
-        <section class="advantages section">
+        <section class="advantages section" id="advantages">
             <div class="container">
                 <h2 class="section_title">Наши преимущества</h2>
                 <div class="advantages_block">
@@ -149,7 +159,7 @@
             </div>
         </section>
         <!-- /.advantages -->
-        <section class="section catalog">
+        <section class="section catalog" id="catalog">
             <div class="container">
                 <h2 class="section_title">Каталог скинали</h2>
                 <div class="catalog_block">
@@ -234,7 +244,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section catalog -->
-        <section class="section blog">
+        <section class="section blog" id="blog">
             <div class="container">
                 <div class="blog_header">
 
@@ -266,7 +276,7 @@
             </div>
         </section>
         <!-- /.section blog -->
-        <section class="section price">
+        <section class="section price" id="price">
             <div class="container">
                 <h2 class="section_title">Цены и виды скинали</h2>
                 <div class="price_block">
@@ -375,7 +385,7 @@
             </div>
         </section>
         <!-- /.section price -->
-        <section class="section work-stages">
+        <section class="section work-stages" id="work-stages">
             <div class="container">
                 <h2 class="section_title">Этапы работ</h2>
                 <!-- /.section_title -->
@@ -434,24 +444,70 @@
             <!-- /.container -->
         </section>
         <!-- /.section work-stages -->
-        <section class="section rewiews">
+        <section class="section before" id="before">
+            <div class="container">
+                <h2 class="section_title">До и после</h2>
+                <div class="before_slider_wrap">
+
+                    <div class="before_slider">
+                        <div class="before_slider_item">
+                                <div class="before-after">
+                                        <img src="img/before-slider/before.jpg">
+                                        <img src="img/before-slider/after.jpg">
+                                </div>
+                        </div>
+                        <div class="before_slider_item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png">
+                                <img src="img/before-slider/sample-after.png">
+                            </div>
+                        </div>
+                        <div class="before_slider_item">
+                                <div class="before-after">
+                                        <img src="img/before-slider/sample-before.png">
+                                        <img src="img/before-slider/sample-after.png">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="before_slider_arrows">
+                        <button class="arrow arrow-left">
+                            <img src="img/before-slider/left-arow.png" alt="">
+                        </button>
+                        <button class="arrow arrow-right">
+                            <img src="img/before-slider/right-arow.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section rewiews" id="rewiews">
             <div class="container">
                 <h2 class="section_title">Отзывы наших клиентов</h2>
-            
-            <div class="rewiews_slider">
-                <div class="rewiews_slider_item">
-                    <div class="rewiews_slider_text">Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. <br>
-                            У Банка очень много способов погашения,и удобное мобильное приложение.</div>
-                    <img src="img/rewiews/rewiews-1.png" alt="Екатерина Иванова Москва" class="rewiews_slider_img"><span class="rewiews_slider_name">Екатерина Иванова <br> Москва</span>
+            <div class="rewiews_slider_wrap">
+
+                <div class="rewiews_slider">
+                    <div class="rewiews_slider_item">
+                        <div class="rewiews_slider_text">Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. <br>
+                                У Банка очень много способов погашения,и удобное мобильное приложение.</div>
+                        <img src="img/rewiews/rewiews-1.png" alt="Екатерина Иванова Москва" class="rewiews_slider_img"><span class="rewiews_slider_name">Екатерина Иванова <br> Москва</span>
+                    </div>
+                    <div class="rewiews_slider_item">
+                        <div class="rewiews_slider_text">Очень часто мы сталкиваемся с недопониманием со стороны сотрудников банка, и иной раз идти не хочется...В очередной раз "навешают лапши на уши" и культурно пошлют...</div>
+                        <img src="img/rewiews/rewiews-2.png" alt="Екатерина Иванова Москва" class="rewiews_slider_img"><span class="rewiews_slider_name">Екатерина Иванова <br> Москва</span>
+                    </div>
+                    <div class="rewiews_slider_item">
+                        <div class="rewiews_slider_text">Хочу рассказать об опыте знакомства с Почта банком. Мне срочно были нужны деньги, а времени на сбор документов для кредита не было. Подруга посоветовала обратиться в офис Почта банка на ул. Тухачевского.</div>
+                        <img src="img/rewiews/rewiews-3.png" alt="Екатерина Иванова Москва" class="rewiews_slider_img"><span class="rewiews_slider_name">Екатерина Иванова <br> Москва</span>
+                    </div>
                 </div>
-                <div class="rewiews_slider_item">
-                    <div class="rewiews_slider_text">Очень часто мы сталкиваемся с недопониманием со стороны сотрудников банка, и иной раз идти не хочется...В очередной раз "навешают лапши на уши" и культурно пошлют...</div>
-                    <img src="img/rewiews/rewiews-2.png" alt="Екатерина Иванова Москва" class="rewiews_slider_img"><span class="rewiews_slider_name">Екатерина Иванова <br> Москва</span>
-                </div>
-                <div class="rewiews_slider_item">
-                    <div class="rewiews_slider_text">Хочу рассказать об опыте знакомства с Почта банком. Мне срочно были нужны деньги, а времени на сбор документов для кредита не было. Подруга посоветовала обратиться в офис Почта банка на ул. Тухачевского.</div>
-                    <img src="img/rewiews/rewiews-3.png" alt="Екатерина Иванова Москва" class="rewiews_slider_img"><span class="rewiews_slider_name">Екатерина Иванова <br> Москва</span>
-                </div>
+                <div class="rewiews_slider_arrows">
+                        <button class="arrow arrow-left_bot">
+                            <img src="img/before-slider/left-arow.png" alt="">
+                        </button>
+                        <button class="arrow arrow-right_bot">
+                            <img src="img/before-slider/right-arow.png" alt="">
+                        </button>
+                    </div>
             </div>
         </div>
             <!-- /.container -->
@@ -471,7 +527,7 @@
                                 </div>
                                 <div class="form_group">
                                     
-                                    <input placeholder="Ваш телефон" type="text" class="input form_input">
+                                    <input placeholder="Ваш телефон" type="tel" class="input form_input">
                                 </div>
                                 <div class="form_group">
                                     
@@ -491,7 +547,7 @@
                 <!-- /.container -->
         </section>
         <!-- /.offer -->
-        <section class="section factory">
+        <section class="section factory" id="factory">
             <div class="container">
                 <div class="h2 section_title">о производстве</div>
                 <div class="factory_block">
@@ -504,7 +560,7 @@
             </div>
         </section>
         <!-- /.factory -->
-        <section class="section contact">
+        <section class="section contact" id="contact">
             <div class="container">
                 <h2 class="section_title">Контакты</h2>
                 <div class="contact_block">
@@ -528,7 +584,7 @@
         <div class="map" id="map">
                 <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac4b19776297c34584bc314d20497cfc716b66d854d79ffbc33567bb418266892&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script> -->
         </div>
-        <section class="section questions">
+        <section class="section questions" id="questions">
             <div class="container">
                 <div class="questions_block">
                     <h3 class="questions_block_title">Остались вопросы?</h3>
@@ -574,6 +630,12 @@
     </footer>
     <!-- /.footer -->
     <!-- подключение виджета обратной связи -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <!-- <script type="text/javascript" src="https://spikmi.com/Widget?Id=391"></script> -->
 </body>
 
