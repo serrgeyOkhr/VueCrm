@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vue-crm
 
 ## Project setup
@@ -27,3 +28,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# skinali
+>>>>>>> b7519737eb52e24fcd1bc9aa0865bf5a3acccfa7
